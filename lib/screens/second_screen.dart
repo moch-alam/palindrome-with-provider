@@ -15,32 +15,32 @@ class SecondScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Mengatur agar teks sejajar ke kiri
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Welcome', style: TextStyle(fontSize: 24)),
-            SizedBox(height: 10), // Jarak antara "Welcome" dan nama
+            SizedBox(height: 10),
             Text(
               '$name',
               style: TextStyle(
-                fontSize: 28, // Ukuran lebih besar untuk nama
-                fontWeight: FontWeight.bold, // Mengatur teks menjadi tebal (bold)
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20), // Jarak antara nama dan teks "Selected User"
+            SizedBox(height: 20),
             Expanded(
               child: Center(
                 child: Text(
                   'Selected User Name ${userProvider.selectedUserName}',
                   style: TextStyle(
                     fontSize: 28,
-                    fontWeight: FontWeight.bold, // Mengatur teks "Selected User" menjadi tebal (bold)
+                    fontWeight: FontWeight.bold,
                   ),
-                  textAlign: TextAlign.center, // Memusatkan teks "Selected User"
+                  textAlign: TextAlign.center, 
                 ),
               ),
             ),
             Align(
-              alignment: Alignment.bottomCenter, // Menempatkan tombol di bagian bawah
+              alignment: Alignment.bottomCenter,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/third');
